@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>crud</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css" />
+
+    <style>
+        body {
+            min-height: 100vh;
+            min-width: 100%;
+            width:100vw;
+            background-image: linear-gradient(rgba(225, 222, 220, 0.3), rgba(186, 186, 184, 0.3)), url("pexels-pixabay-434337\ \(1\).jpg");
+            background-position: right;
+            background-size: cover;
+            position: relative;
+        }
+
+        .btn-block {
+            width: 100%;
+        }
+
+        #csshook {
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="header center ">
+            <h4 class="teal-text text-lighten-2">Make A Todo List Here</h4>
+        </div>
+        <br>
+
+
+        <form id="reviewForm">
+            <input type="hidden" id="hiddenId" />
+
+            <div class="input-field ">
+                <label form="title" class="teal-text text-lighten-2 ">Title</label>
+                <input type="text" class="teal-text text-lighten-1 " id="title" />
+            </div>
+
+            <div class="input-field">
+                <label form="desc" class="teal-text text-lighten-2">Description</label>
+                <textarea class="materialize-textarea teal-text text-lighten-2" id="desc"></textarea>
+            </div>
+
+            <div class="col s12">
+                <button class="waves-effect waves-light btn btn-block" id="submit">Add / Update</button>
+            </div>
+        </form>
+        </br>
+        </br>
+
+        <ul id="reviews"></ul>
+        
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-database.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.js"
+        integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
